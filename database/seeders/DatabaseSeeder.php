@@ -14,10 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Storage::deleteDirectory('products');
-        Storage::makeDirectory('products');
+        Storage::deleteDirectory('/public/categories');
+        Storage::makeDirectory('/public/categories');
+
+        Storage::deleteDirectory('/public/subCategories');
+        Storage::makeDirectory('/public/subCategories');
 
         $this->call(UserSeeder::class);
         $this->call(CategorySeeder::class);
+        $this->call(SubcategorySeeder::class);
     }
 }
