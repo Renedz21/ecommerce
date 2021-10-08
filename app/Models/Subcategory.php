@@ -13,14 +13,14 @@ class Subcategory extends Model
 
     //UNO A MUCHOS
 
-    public function Products()
+    public function products()
     {
         return $this->hasMany(Product::class);
     }
 
     //UNO A MUCHOS INVERSA
 
-    public function Category()
+    public function category()
     {
         return $this->belongsTo(Category::class);
     }

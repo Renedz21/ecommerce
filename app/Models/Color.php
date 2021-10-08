@@ -13,12 +13,12 @@ class Color extends Model
 
     //RELACION MUCHOS A MUCHOS
 
-    public function Product()
+    public function product()
     {
         return $this->belongsToMany(Product::class);
     }
 
-    public function Size()
+    public function size()
     {
         return $this->belongsToMany(Size::class);
     }

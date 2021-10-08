@@ -27,7 +27,7 @@ class ProductFactory extends Factory
         $name = $this->faker->sentence(2);
 
         $subcategoria = Subcategory::all()->random();
-        $category = $subcategoria->Category;
+        $category = $subcategoria->category;
 
         $brands = $category->brands->random();
 

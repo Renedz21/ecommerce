@@ -25,7 +25,7 @@ class Category extends Model
         return $this->belongsToMany(Brand::class);
     }
 
-    public function Products()
+    public function products()
     {
         return $this->hasManyThrough(Product::class, Subcategory::class);
     }

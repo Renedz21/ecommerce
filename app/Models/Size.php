@@ -13,14 +13,14 @@ class Size extends Model
 
     //RELACION UNO A MUCHOS INVERSA
 
-    public function Product()
+    public function product()
     {
         return $this->belongsTo(Product::class);
     }
 
     //RELACION MUCHOS A MUCHOS
 
-    public function Colors()
+    public function colors()
     {
         return $this->belongsToMany(Color::class);
     }

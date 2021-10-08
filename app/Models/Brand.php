@@ -11,12 +11,12 @@ class Brand extends Model
 
     protected $guarded = [];
 
-    public function Category()
+    public function category()
     {
         return $this->belongsToMany(Category::class);
     }
 
-    public function Products()
+    public function products()
     {
         return $this->hasMany(Product::class);
     }

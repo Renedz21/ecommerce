@@ -16,24 +16,24 @@ class Product extends Model
     protected $guarded = [];
 
 
-    public function Size()
+    public function size()
     {
         return $this->hasMany(Size::class);
     }
 
     //RELACION UNO A MUCHOS INVERSA
 
-    public function Brands()
+    public function brands()
     {
         return $this->belongsTo(Brand::class);
     }
 
-    public function subCategory()
+    public function subcategory()
     {
         return $this->belongsTo(Subcategory::class);
     }
 
-    public function Colors()
+    public function colors()
     {
         return $this->belongsToMany(Color::class);
     }
